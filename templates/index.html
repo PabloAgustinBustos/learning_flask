@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+{% block title %}Home page{% endblock %}
+
+{% block content %}
+    <h1>{{ owner }}'s template</h1>
+
+    <ul>
+        {% for item in my_list %}
+            <li>{{ item }} | {{ "par" if item%2 == 0 else "impar" }} </li>
+        {% endfor %}
+    </ul>
+
+    <a href="{{ url_for('page') }}">go to page</a>
+{% endblock %}
